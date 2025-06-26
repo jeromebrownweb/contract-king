@@ -6,7 +6,8 @@ body {
 }
 
 .main-content { 
-  padding: 60px 0px;
+  padding-top: 30px;
+  padding-bottom: 60px;
 }
 
 /* Reusable white button class */
