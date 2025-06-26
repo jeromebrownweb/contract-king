@@ -1,0 +1,30 @@
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 32px 48px;
+  background-color: #041531; /* Darker background from new Figma */
+  color: #fff;
+  width: 100%;
+  box-sizing: border-box; /* Prevents padding from breaking the layout */
+}
+
+.footer-logo {
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+
+.footer-links {
+  display: flex;
+  gap: 24px;
+}
+
+.footer-links a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1rem;
+}
+
+.social-icons a {
+  color: #fff;
+} 

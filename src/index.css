@@ -1,0 +1,31 @@
+body {
+  background: #0a2240;
+  margin: 0;
+  font-family: 'Inter', Arial, sans-serif;
+  color: #fff;
+}
+
+.main-content { 
+  padding: 60px 0px;
+}
+
+/* --- Responsive Styles --- */
+
+/* For Tablets and smaller devices (screen width 900px or less) */
+@media (max-width: 900px) {
+  .main-content {
+    flex-direction: column; /* Stack the columns vertically */
+    align-items: center;    /* Center the stacked items */
+    padding: 0px 16px;
+  }
+
+  .filter-sidebar {
+    width: 100%;            /* Allow the sidebar to take the full width */
+     /* But don't let it get too wide on larger tablets */
+  }
+
+  .job-list-area {
+    width: 100%;
+
+  }
+}

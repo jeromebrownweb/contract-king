@@ -1,0 +1,72 @@
+/* src/HomeLayout.css */
+
+/* --- DESKTOP STYLES (for screens wider than 900px) --- */
+.layout-container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 32px;
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.job-list-area {
+  flex: 1;
+}
+
+/* Hide the toggle button on desktop */
+.filter-toggle-button {
+  display: none;
+  appearance: none;
+  -webkit-appearance: none;
+  box-shadow: 0 0 0 1px #0a2240;
+}
+
+
+/* --- TABLET/MOBILE STYLES (for screens 900px or smaller) --- */
+@media (max-width: 900px) {
+  .layout-container {
+    flex-direction: column; /* Stack everything vertically */
+    align-items: center;
+    /* padding: 0 24px; */
+    gap: 0px;
+  }
+
+  /* Show the toggle button */
+  .filter-toggle-button {
+    display: flex;
+    align-items: center;
+    gap: 0px;
+    /* gap: 8px; */
+    padding: 16px 16px;
+    background-color: #18325a;
+    color: #fff;
+    border: 1px solid #0a2240;;
+    border-radius: 8px;
+    font-size: 1rem;
+    cursor: pointer;
+    width: 100%;
+    /* max-width: 500px; */
+    margin-bottom: 24px;
+    justify-content: center;
+    appearance: none;
+    -webkit-appearance: none;
+    box-shadow: 0 0 0 1px #0a2240;
+  }
+
+  /* By default, hide the filter sidebar on small screens */
+  .layout-container .filter-sidebar {
+    display: none;
+    width: 93%;
+    margin-right: 0px;
+    /* max-width: 500px; */
+    margin-bottom: 32px;
+  }
+
+  /* BUT, when the filter is open, show the sidebar */
+  .filter-open .filter-sidebar {
+    display: block;
+    /* margin-bottom: 24px; */
+  }
+}

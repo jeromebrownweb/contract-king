@@ -1,0 +1,11 @@
+.hero {
+  padding: 80px 20px; /* Generous padding top and bottom */
+  text-align: center;
+}
+
+.hero h1 {
+  color: #fff;
+  font-size: 3rem;
+  font-weight: bold;
+  line-height: 1.2;
+}

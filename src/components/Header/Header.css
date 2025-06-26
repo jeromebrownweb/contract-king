@@ -1,0 +1,203 @@
+/* src/components/Header/Header.css */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 32px 48px;
+    background: #10244d;
+}
+
+.logo {
+    color: #fff;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.nav-links {
+    display: flex;
+    gap: 24px;
+    align-items: center;
+}
+
+.desktop-nav-links {
+    display: flex;
+    gap: 24px;
+    align-items: center;
+}
+
+.desktop-nav-links a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1rem;
+}
+
+.view-job,
+.post-contract {
+    padding: 8px 20px;
+    border: none;
+    border-radius: 6px;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.view-job {
+    background: transparent;
+    color: #fff;
+    border: 1px solid #fff;
+}
+
+.post-contract {
+    background: #fff;
+    color: #10244d;
+    font-weight: bold;
+}
+
+.post-contract:hover {
+    background: #f2f2f2;
+}
+
+body {
+    margin: 0;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-label {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.chevron {
+    transition: transform 0.2s;
+}
+
+.chevron.open {
+    transform: rotate(180deg);
+}
+
+.dropdown-menu {
+    position: absolute;
+    top: 32px;
+    right: 0;
+    background: #0d1a33;
+    padding: 24px 24px 16px 24px;
+    border-radius: 10px;
+    min-width: 200px;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    z-index: 1001;
+}
+
+.dropdown-menu a {
+    color: #fff;
+    text-decoration: underline;
+    font-size: 1rem;
+    transition: color 0.2s;
+}
+
+.dropdown-menu a:hover {
+    color: #ffd700;
+}
+
+/* Prevent page scrolling when mobile menu is open */
+body.no-scroll {
+    overflow: hidden;
+}
+
+/* --- Mobile Menu Styles --- */
+
+/* Hide the hamburger button on desktop */
+.menu-toggle-btn {
+    display: none;
+    background: none;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    z-index: 1001; /* Make sure it's on top */
+}
+
+/* The dark, full-screen overlay */
+.mobile-menu-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: #041531; /* Dark background from your design */
+    z-index: 1000;
+    padding: 80px 24px 40px 24px;
+    box-sizing: border-box;
+}
+
+/* The container for the links inside the overlay */
+.mobile-nav-links {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 24px;
+    width: 100%;
+}
+
+.mobile-nav-links a,
+.mobile-dropdown-label {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.2rem;
+    width: 100%;
+}
+
+/* The big button at the bottom of the mobile menu */
+.mobile-post-contract {
+    background-color: #fff;
+    color: #041531;
+    border: none;
+    border-radius: 8px;
+    padding: 16px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    width: 100%;
+    margin-top: auto; /* Pushes it to the bottom */
+    cursor: pointer;
+}
+
+.mobile-post-contract:hover {
+    background: #f2f2f2;
+}
+
+/* --- Responsive Media Query --- */
+/* On screens 900px or smaller */
+@media (max-width: 900px) {
+    /* Hide the original desktop navigation */
+    .desktop-nav-links {
+        display: none;
+    }
+
+    /* Show the hamburger button */
+    .menu-toggle-btn {
+        display: block;
+    }
+
+    /* When the menu is open, make the header transparent so we see the overlay */
+    .header.menu-open {
+        background-color: transparent;
+    }
+}
+
+/* Add spacing to mobile dropdown submenu links */
+.mobile-dropdown-menu a {
+    margin: 42px 0;
+}
+
+/* Add spacing to top-level mobile nav links and button */
+.mobile-nav-links > a,
+.mobile-nav-links > .mobile-dropdown,
+.mobile-nav-links > .mobile-post-contract {
+    margin: 16px 0;
+}
