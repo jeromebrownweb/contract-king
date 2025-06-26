@@ -9,6 +9,22 @@ body {
   padding: 60px 0px;
 }
 
+/* Reusable white button class */
+.white-btn {
+  background: #fff;
+  color: #0a2240;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.white-btn:hover {
+  background: #f2f2f2;
+}
+
 /* --- Responsive Styles --- */
 
 /* For Tablets and smaller devices (screen width 900px or less) */

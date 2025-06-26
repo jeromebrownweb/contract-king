@@ -8,7 +8,7 @@ function SearchBar() {
         placeholder="Enter a job title"
         className="search-input"
       />
-      <button type="submit" className="search-btn">
+      <button type="submit" className="white-btn search-btn">
         Find my contract
       </button>
     </form>

@@ -5,6 +5,7 @@
   gap: 12px;
   max-width: 1200px;
   margin: 0 auto 40px auto;
+  padding: 0 20px;
 }
 
 .search-input {

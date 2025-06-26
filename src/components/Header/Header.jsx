@@ -1,7 +1,7 @@
 import './Header.css';
 import { FaChevronDown } from 'react-icons/fa';
 import { FiMenu, FiX } from 'react-icons/fi';
-import { useState } from 'react';
+import { useState, useRef } from 'react';
 
 // src/components/Header/Header.jsx
 
@@ -9,12 +9,27 @@ function Header() {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
     const [dropdownOpen, setDropdownOpen] = useState(false);
     const [mobileDropdownOpen, setMobileDropdownOpen] = useState(false);
+    const dropdownTimeout = useRef(null);
 
     if (isMenuOpen) {
         document.body.classList.add('no-scroll');
     } else {
         document.body.classList.remove('no-scroll');
     }
+
+    const handleDropdownEnter = () => {
+        if (dropdownTimeout.current) {
+            clearTimeout(dropdownTimeout.current);
+            dropdownTimeout.current = null;
+        }
+        setDropdownOpen(true);
+    };
+
+    const handleDropdownLeave = () => {
+        dropdownTimeout.current = setTimeout(() => {
+            setDropdownOpen(false);
+        }, 150);
+    };
 
     return (
         <header className={`header ${isMenuOpen ? 'menu-open' : ''}`}>
@@ -23,8 +38,8 @@ function Header() {
                 <a href="#">About us</a>
                 <div
                     className="dropdown"
-                    onMouseEnter={() => setDropdownOpen(true)}
-                    onMouseLeave={() => setDropdownOpen(false)}
+                    onMouseEnter={handleDropdownEnter}
+                    onMouseLeave={handleDropdownLeave}
                 >
                     <span className="dropdown-label">
                         Employer account
@@ -35,15 +50,17 @@ function Header() {
                             <FaChevronDown size={14} />
                         </span>
                     </span>
-                    {dropdownOpen && (
-                        <div className="dropdown-menu">
-                            <a href="#">Why post with us?</a>
-                            <a href="#">Create an account</a>
-                            <a href="#">Sign in</a>
-                        </div>
-                    )}
+                    <div
+                        className={`dropdown-menu${dropdownOpen ? ' open' : ''}`}
+                        onMouseEnter={handleDropdownEnter}
+                        onMouseLeave={handleDropdownLeave}
+                    >
+                        <a href="#">Why post with us?</a>
+                        <a href="#">Create an account</a>
+                        <a href="#">Sign in</a>
+                    </div>
                 </div>
-                <button className="post-contract">Post a contract</button>
+                <button className="white-btn post-contract">Post a contract</button>
             </nav>
             <button
                 className="menu-toggle-btn"
@@ -75,7 +92,7 @@ function Header() {
                                 </div>
                             )}
                         </div>
-                        <button className="mobile-post-contract">Post a contract</button>
+                        <button className="white-btn mobile-post-contract">Post a contract</button>
                     </nav>
                 </div>
             )}

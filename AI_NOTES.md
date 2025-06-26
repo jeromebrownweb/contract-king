@@ -12,7 +12,17 @@
 
 ---
 
-## 🟢 Checkpoint Saved: Responsive Header & Mobile Menu Tweaks (June 25, 2024)
+## 🟢 Checkpoint Saved: White Button Refactor & Git Setup (July 2, 2024)
+
+- **Git is now set up for local version control and checkpoints.**
+- Created a reusable `.white-btn` class in `src/index.css` for all white buttons.
+- Updated all white buttons (header, mobile menu, search bar) to use `.white-btn` plus their specific classes for unique tweaks.
+- Confirmed the UI is working and nothing is broken after the refactor.
+- You can now style all white buttons in one place and add extra styles as needed.
+
+---
+
+## 🟢 Previous Checkpoint: Responsive Header & Mobile Menu Tweaks (June 25, 2024)
 
 ### Project Overview
 - **Project:** Job Board (React + Vite)
@@ -47,4 +57,4 @@
 
 ---
 
-*Update this file with new checkpoints and notes as you go!* 
+*Update this file with new checkpoints and notes as you go!*            
