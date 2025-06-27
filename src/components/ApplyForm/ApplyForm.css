@@ -1,0 +1,104 @@
+.apply-form-card {
+  background: #1a2b4c;
+  color: #fff;
+  border-radius: 16px;
+  padding: 32px 32px 24px 32px;
+  box-shadow: 0 2px 8px rgba(10, 20, 40, 0.04);
+  margin-bottom: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.apply-form-card h3 {
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.apply-form-card label {
+  display: flex;
+  flex-direction: column;
+  font-size: 1rem;
+  margin-bottom: 8px;
+  gap: 4px;
+}
+
+.apply-form-card input[type="text"],
+.apply-form-card input[type="email"],
+.apply-form-card input[type="tel"] {
+  padding: 10px 12px;
+  border-radius: 8px;
+  border: 1px solid #2c3e5c;
+  background: #14264a;
+  color: #fff;
+  font-size: 1rem;
+  margin-top: 2px;
+}
+
+.cv-label {
+  margin-bottom: 12px;
+}
+
+.cv-drop-area {
+  background: #14264a;
+  border: 2px dashed #2c3e5c;
+  border-radius: 8px;
+  padding: 24px 12px;
+  text-align: center;
+  color: #b6c2e2;
+  cursor: pointer;
+  margin-top: 4px;
+  transition: border-color 0.2s;
+}
+
+.cv-drop-area:hover {
+  border-color: #ffd600;
+}
+
+.cv-browse {
+  color: #ffd600;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.cv-file-info {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  color: #fff;
+}
+
+.remove-cv-btn {
+  background: none;
+  border: none;
+  color: #ffd600;
+  cursor: pointer;
+  font-size: 0.95rem;
+  text-decoration: underline;
+}
+
+.submit-apply-btn {
+  background: #ffd600;
+  color: #102347;
+  border: none;
+  border-radius: 8px;
+  padding: 12px 0;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+  margin-top: 12px;
+  transition: background 0.2s, color 0.2s;
+}
+
+.submit-apply-btn:hover {
+  background: #fff;
+  color: #102347;
+}
+
+@media (max-width: 600px) {
+  .apply-form-card {
+    padding: 18px 8px 16px 8px;
+  }
+} 

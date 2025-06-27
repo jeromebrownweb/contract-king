@@ -1,0 +1,59 @@
+.job-description-card {
+  background: #1a2b4c;
+  color: #fff;
+  border-radius: 16px;
+  padding: 32px 32px 24px 32px;
+  box-shadow: 0 2px 8px rgba(10, 20, 40, 0.04);
+  margin-bottom: 24px;
+}
+
+.job-description-card h1 {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.job-meta {
+  font-size: 1rem;
+  color: #b6c2e2;
+  margin-bottom: 24px;
+}
+
+.job-description-card h2 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 12px;
+}
+
+.job-description-card h3 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-top: 24px;
+  margin-bottom: 10px;
+}
+
+.job-description-card p {
+  font-size: 1rem;
+  margin-bottom: 16px;
+  line-height: 1.7;
+}
+
+.job-description-card ul {
+  margin: 0 0 16px 0;
+  padding-left: 18px;
+}
+
+.job-description-card ul li {
+  margin-bottom: 8px;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+@media (max-width: 600px) {
+  .job-description-card {
+    padding: 18px 8px 16px 8px;
+  }
+  .job-description-card h1 {
+    font-size: 1.3rem;
+  }
+} 
