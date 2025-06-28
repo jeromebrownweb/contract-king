@@ -75,7 +75,7 @@ const ApplyForm = () => {
           />
         </div>
       </label>
-      <button className="submit-apply-btn" type="submit">Submit Application</button>
+      <button className="white-btn full-width-btn" type="submit">Submit Application</button>
     </form>
   );
 };
