@@ -1,0 +1,91 @@
+.contract-card {
+  background: #18325a;
+  border-radius: 16px;
+  padding: 32px 32px 24px 32px;
+  margin-bottom: 32px;
+  position: relative;
+  box-shadow: 0 2px 8px rgba(10, 20, 40, 0.04);
+}
+
+.delete-btn {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background: none;
+  border: 1.5px solid #4a5a7a;
+  border-radius: 8px;
+  padding: 6px 8px;
+  color: #fff;
+  cursor: pointer;
+  transition: border-color 0.2s, background 0.2s;
+}
+.delete-btn:hover {
+  border-color: #ffd600;
+  background: #1a2b4c;
+}
+
+.contract-title {
+  color: #fff;
+  font-size: 1.6rem;
+  font-weight: 700;
+  margin-bottom: 16px;
+}
+.contract-company,
+.contract-type,
+.contract-posted {
+  color: #bfcbe2;
+  font-size: 1rem;
+  margin-bottom: 4px;
+}
+.contract-applicants {
+  margin: 10px 0 18px 0;
+  font-size: 1rem;
+}
+.applicants-label {
+  color: #bfcbe2;
+}
+.applicants-count {
+  color: #ffd600;
+  font-weight: 600;
+}
+.close-job-link {
+  color: #bfcbe2;
+  text-decoration: underline;
+  font-size: 1rem;
+  display: inline-block;
+  margin-bottom: 18px;
+  margin-top: 2px;
+}
+.contract-card-actions {
+  display: flex;
+  gap: 16px;
+  justify-content: flex-end;
+}
+.dark-btn {
+  background: #1a2b4c;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 12px 24px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+}
+.dark-btn:hover {
+  background: #ffd600;
+  color: #1a2b4c;
+}
+@media (max-width: 600px) {
+  .contract-card {
+    padding: 18px 8px 16px 8px;
+  }
+  .contract-title {
+    font-size: 1.2rem;
+  }
+  .contract-card-actions {
+    flex-direction: column;
+    gap: 10px;
+    align-items: stretch;
+  }
+} 
