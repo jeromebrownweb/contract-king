@@ -9,11 +9,11 @@
   padding: 20px;
   margin-bottom: 20px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  transition: transform 0.2s ease-in-out;
+  transition: background-color 0.2s; /* updated for smooth color change */
 }
 
 .job-card:hover {
-  transform: translateY(-5px);
+  background-color: #1F4A8E; /* lighter blue on hover */
 }
 
 .posted-time {
@@ -41,8 +41,8 @@
 }
 
 .tag {
-  background-color: #2d3748; /* Darker blue for tags */
-  color: #ffffff; /* White for tag text */
+  background-color: #0F2140; /* your dark blue */
+  color: #ffffff;
   padding: 5px 10px;
   border-radius: 5px;
   font-size: 0.8em;
