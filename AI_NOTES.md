@@ -66,3 +66,23 @@
 - Updated workflow notes and kept code clean for future backend integration.
 
 *Update this file with new checkpoints and notes as you go!*            
+
+
+---
+
+## 🔄 Updated Instructions for All New Frontend Pages (June 28, 2025)
+
+We are now building **only the frontend of new pages**, based on Figma screenshots.
+
+### New Process for Each Page:
+- AI will **review the screenshot of the design first**.
+- It will make a short plan outlining:
+  - Which components will be built
+  - How layout and styles will be applied
+- AI must **run this plan by you first before writing any code**.
+- All pages should:
+  - Use the existing header and footer
+  - Follow the same fonts, colors, and spacing
+  - Use existing styles like `.white-btn` where relevant
+- After building and testing the UI, the AI will update this file with a new checkpoint describing the work.
+

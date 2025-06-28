@@ -2,6 +2,7 @@ import './Header.css';
 import { FaChevronDown } from 'react-icons/fa';
 import { FiMenu, FiX } from 'react-icons/fi';
 import { useState, useRef } from 'react';
+import { Link } from 'react-router-dom';
 
 // src/components/Header/Header.jsx
 
@@ -33,7 +34,7 @@ function Header() {
 
     return (
         <header className={`header ${isMenuOpen ? 'menu-open' : ''}`}>
-            <div className="logo">Contract King</div>
+            <Link to="/" className="logo">Contract King</Link>
             <nav className="desktop-nav-links">
                 <a href="#">About us</a>
                 <div
