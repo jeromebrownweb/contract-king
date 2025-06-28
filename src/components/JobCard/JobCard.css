@@ -6,7 +6,7 @@
 .job-card {
   background-color: #18325a; /* Blue background */
   border-radius: 8px;
-  padding: 20px;
+  padding: 0px 20px 20px 20px;
   margin-bottom: 20px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   transition: background-color 0.2s; /* updated for smooth color change */
@@ -16,10 +16,17 @@
   background-color: #1F4A8E; /* lighter blue on hover */
 }
 
+.job-card-header-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
 .posted-time {
   font-size: 0.8em;
-  color: #a0aec0; /* Lighter gray for time */
-  margin-bottom: 10px;
+  color: #a0aec0;
+  margin-bottom: 0; /* Remove bottom margin for right alignment */
 }
 
 .job-title {
