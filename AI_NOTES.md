@@ -67,6 +67,14 @@
 
 *Update this file with new checkpoints and notes as you go!*            
 
+---
+
+## 🟢 Checkpoint Saved: Employer Contracts Card & Button UI Fixes (July 4, 2024)
+
+- Fixed the "View Applicants" button padding to match the "Edit posting" button by updating `.white-btn` with `padding: 12px 24px;` in `index.css`.
+- Made `.contract-card` padding even on mobile (`padding: 16px;` for all sides) for a balanced look.
+- Both changes confirmed working as intended on the Employer Contracts Page.
+- No impact to other card components or buttons.
 
 ---
 

@@ -12,10 +12,12 @@ const ContractCard = ({
 }) => {
   return (
     <div className="contract-card">
-      <button className="delete-btn" aria-label="Delete contract">
-        <FiTrash2 size={20} />
-      </button>
-      <h2 className="contract-title">{title}</h2>
+      <div className="contract-card-header">
+        <h2 className="contract-title">{title}</h2>
+        <button className="delete-btn" aria-label="Delete contract">
+          <FiTrash2 size={20} />
+        </button>
+      </div>
       <div className="contract-company">Company - {company}</div>
       <div className="contract-type">Contract Type - {contractType}</div>
       <div className="contract-posted">Posted - {postedDate} | {daysAgo} days ago</div>
