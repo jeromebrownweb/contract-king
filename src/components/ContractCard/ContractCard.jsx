@@ -9,26 +9,34 @@ const ContractCard = ({
   postedDate = '10/12/2024',
   daysAgo = 6,
   applicants = 10,
+  showTrash = true,
+  showCloseLink = true,
+  showClosedDate = false,
+  closedDate = '',
+  primaryButtonText = 'Edit posting',
+  secondaryButtonText = 'View Applicants',
 }) => {
   return (
     <div className="contract-card">
       <div className="contract-card-header">
         <h2 className="contract-title">{title}</h2>
-        <button className="delete-btn" aria-label="Delete contract">
-          <FiTrash2 size={20} />
-        </button>
+        {showTrash && (
+          <button className="delete-btn" aria-label="Delete contract">
+            <FiTrash2 size={20} />
+          </button>
+        )}
       </div>
       <div className="contract-company">Company - {company}</div>
       <div className="contract-type">Contract Type - {contractType}</div>
-      <div className="contract-posted">Posted - {postedDate} | {daysAgo} days ago</div>
+      <div className="contract-posted">Posted - {postedDate}{showClosedDate && closedDate ? <span> | Closed - {closedDate}</span> : daysAgo !== undefined ? ` | ${daysAgo} days ago` : null}</div>
       <div className="contract-applicants">
         <span className="applicants-label">Applicants - </span>
         <span className="applicants-count">{applicants}</span>
       </div>
-      <a href="#" className="close-job-link">Close job post</a>
+      {showCloseLink && <a href="#" className="close-job-link">Close job post</a>}
       <div className="contract-card-actions">
-        <button className="dark-btn">Edit posting</button>
-        <button className="white-btn">View Applicants</button>
+        <button className="dark-btn">{primaryButtonText}</button>
+        <button className="white-btn">{secondaryButtonText}</button>
       </div>
     </div>
   );

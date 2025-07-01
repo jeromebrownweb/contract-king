@@ -78,6 +78,16 @@
 
 ---
 
+## 🟢 Checkpoint Saved: Employer Contracts Closed Tab & Flexible Card (July 4, 2024)
+
+- Added working tabs to Employer Contracts page: switch between Live and Closed Contracts.
+- Updated ContractCard to accept props for trash icon, close link, closed date, and button labels, so it works for both live and closed contracts.
+- Closed tab cards hide trash icon and close link, show closed date, and use correct button labels.
+- Ensured content stays in a max-width 1200px container, with 20px side padding on mobile for comfort.
+- All changes confirmed working as intended and matching the design.
+
+---
+
 ## 🔄 Updated Instructions for All New Frontend Pages (June 28, 2025)
 
 We are now building **only the frontend of new pages**, based on Figma screenshots.
@@ -93,4 +103,13 @@ We are now building **only the frontend of new pages**, based on Figma screensho
   - Follow the same fonts, colors, and spacing
   - Use existing styles like `.white-btn` where relevant
 - After building and testing the UI, the AI will update this file with a new checkpoint describing the work.
+
+---
+
+## 💾 How to Save a Checkpoint with Git
+
+1. Open your terminal in the project folder.
+2. Run:
+   git add . && git commit -m "Your descriptive message here"
+3. This saves all your changes as a checkpoint you can revert to later.
 

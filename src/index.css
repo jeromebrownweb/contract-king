@@ -58,6 +58,13 @@ body {
   }
 }
 
+@media (max-width: 600px) {
+  .employer-contracts-container {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+
 .employer-contracts-container {
   max-width: 1200px;
   margin: 0 auto;
