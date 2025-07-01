@@ -6,6 +6,7 @@ import RootLayout from './RootLayout.jsx';
 import HomePage from './HomePage.jsx';
 import JobDetailsPage from './pages/JobDetailsPage.jsx'; // We will create this file
 import EmployerContractsPage from './pages/EmployerContractsPage.jsx';
+import CreateContractPage from './pages/CreateContractPage.jsx';
 
 const router = createBrowserRouter([
   {
@@ -23,6 +24,10 @@ const router = createBrowserRouter([
       {
         path: 'employer/contracts',
         element: <EmployerContractsPage />,
+      },
+      {
+        path: 'employer/contracts/create',
+        element: <CreateContractPage />,
       },
     ],
   },

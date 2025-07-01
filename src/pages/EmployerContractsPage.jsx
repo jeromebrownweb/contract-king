@@ -1,18 +1,19 @@
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import '../index.css';
 import ContractCard from '../components/ContractCard/ContractCard';
 import NoContractsCard from '../components/ContractCard/NoContractsCard';
 
 const liveContracts = [
-  // {
-  //   id: 1,
-  //   title: 'Senior Web Designer',
-  //   company: 'Spotify',
-  //   contractType: 'Outside IR35',
-  //   postedDate: '10/12/2024',
-  //   daysAgo: 6,
-  //   applicants: 10,
-  // },
+  {
+    id: 1,
+    title: 'Senior Web Designer',
+    company: 'Spotify',
+    contractType: 'Outside IR35',
+    postedDate: '10/12/2024',
+    daysAgo: 6,
+    applicants: 10,
+  },
   // ...add more live contracts as needed
 ];
 
@@ -31,10 +32,10 @@ const closedContracts = [
 
 const EmployerContractsPage = () => {
   const [activeTab, setActiveTab] = useState('live');
+  const navigate = useNavigate();
 
-  // Placeholder handler for post contract button
   const handlePostContract = () => {
-    alert('Post a contract clicked!');
+    navigate('/employer/contracts/create');
   };
 
   return (
