@@ -78,6 +78,10 @@ body {
   margin-bottom: 32px;
 }
 
+h1.employer-contracts-title {
+  margin-top: 0px;
+}
+
 .employer-contracts-tabs {
   display: flex;
   gap: 32px;
@@ -100,4 +104,8 @@ body {
 .contracts-tab.active {
   border-bottom: 2px solid #fff;
   color: #fff;
+}
+
+.employer-contracts-header {
+  margin-bottom: 42px;
 }

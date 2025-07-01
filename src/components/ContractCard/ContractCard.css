@@ -96,4 +96,35 @@
     gap: 10px;
     align-items: stretch;
   }
+}
+
+.no-contracts-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  min-height: 220px;
+  box-shadow: none;
+  margin-bottom: 0;
+}
+.no-contracts-logo {
+  margin-bottom: 24px;
+}
+.no-contracts-message {
+  color: #fff;
+  font-size: 1.2rem;
+  font-weight: 500;
+  margin-bottom: 24px;
+}
+.no-contracts-card .white-btn {
+  min-width: 180px;
+}
+@media (max-width: 600px) {
+  .no-contracts-card {
+    min-height: 160px;
+  }
+  .no-contracts-card .white-btn {
+    min-width: 100%;
+  }
 } 
