@@ -74,18 +74,23 @@ const CreateContractPage = () => {
           </label>
           <div className="contract-form-radio-group">
             <span className="contract-form-radio-label">Contract Type</span>
-            {contractTypes.map((type) => (
-              <label key={type} className="contract-form-radio">
-                <input
-                  type="radio"
-                  name="contractType"
-                  value={type}
-                  checked={form.contractType === type}
-                  onChange={handleChange}
-                />
-                {type}
-              </label>
-            ))}
+            <div className="contract-type-radio-list">
+              {contractTypes.map((type) => (
+                <label key={type} className="custom-radio">
+                  <input
+                    type="radio"
+                    name="contractType"
+                    value={type}
+                    checked={form.contractType === type}
+                    onChange={handleChange}
+                  />
+                  <span className="custom-radio-outer">
+                    <span className="custom-radio-inner" />
+                  </span>
+                  <span className="custom-radio-label-text">{type}</span>
+                </label>
+              ))}
+            </div>
           </div>
           <label>
             Role Description
@@ -98,8 +103,8 @@ const CreateContractPage = () => {
             />
           </label>
           <div className="contract-form-actions">
-            <button type="button" className="white-btn">Cancel</button>
-            <button type="submit" className="dark-btn">Save Changes</button>
+            <button type="button" className="outline-btn">Cancel</button>
+            <button type="submit" className="white-btn">Save Changes</button>
           </div>
         </form>
       </div>

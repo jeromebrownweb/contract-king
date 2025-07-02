@@ -35,7 +35,7 @@ const ContractCard = ({
       </div>
       {showCloseLink && <a href="#" className="close-job-link">Close job post</a>}
       <div className="contract-card-actions">
-        <button className="dark-btn">{primaryButtonText}</button>
+        <button className="outline-btn">{primaryButtonText}</button>
         <button className="white-btn">{secondaryButtonText}</button>
       </div>
     </div>

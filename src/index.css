@@ -130,10 +130,7 @@ h1.employer-contracts-title {
   font-weight: 600;
   margin-bottom: 18px;
 }
-.contract-form-card label {
-  color: #bfcbe2;
-  font-size: 1rem;
-  font-weight: 500;
+.contract-form-card label:not(.custom-radio) {
   display: flex;
   flex-direction: column;
   gap: 8px;
@@ -154,23 +151,69 @@ h1.employer-contracts-title {
   min-height: 120px;
   resize: vertical;
 }
-.contract-form-radio-group {
+.contract-type-radio-list {
   display: flex;
-  gap: 32px;
-  margin: 12px 0 0 0;
-  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 24px;
+  margin-top: 8px;
+  width: 100%;
 }
-.contract-form-radio-label {
+.custom-radio {
+  display: flex !important;
+  flex-direction: row !important;
+  align-items: center;
+  gap: 16px;
+  position: relative;
+  cursor: pointer;
+  font-size: 1.1rem;
   color: #bfcbe2;
-  font-weight: 500;
-  margin-right: 16px;
-  align-self: center;
+  width: 100%;
+  padding: 0 0 0 0;
 }
-.contract-form-radio {
+.custom-radio input[type="radio"] {
+  opacity: 0;
+  position: absolute;
+  left: 0;
+  width: 34px;
+  height: 34px;
+  margin: 0;
+  z-index: 2;
+  cursor: pointer;
+}
+.custom-radio-outer {
+  width: 34px;
+  height: 34px;
+  border: 2px solid #fff;
+  border-radius: 50%;
   display: flex;
   align-items: center;
-  gap: 8px;
-  font-size: 1rem;
+  justify-content: center;
+  transition: border-color 0.2s;
+  background: transparent;
+}
+.custom-radio-inner {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: #fff;
+  display: none;
+}
+.custom-radio input[type="radio"]:checked + .custom-radio-outer .custom-radio-inner {
+  display: block;
+}
+.custom-radio-label-text {
+  color: #bfcbe2;
+  font-size: 1.1rem;
+  white-space: normal;
+  text-align: left;
+}
+.contract-form-radio-group {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0;
+  margin: 12px 0 0 0;
 }
 .contract-form-note {
   color: #bfcbe2;
@@ -191,13 +234,30 @@ h1.employer-contracts-title {
     padding: 18px 8px 16px 8px;
     gap: 14px;
   }
-  .contract-form-radio-group {
-    flex-direction: column;
-    gap: 10px;
+  .contract-type-radio-list {
+    gap: 16px;
   }
   .contract-form-actions {
     flex-direction: column;
     gap: 10px;
     align-items: stretch;
   }
+}
+
+.outline-btn {
+  background: transparent;
+  color: #fff;
+  border: 2px solid #fff;
+  border-radius: 8px;
+  font-weight: bold;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: border-color 0.2s, background 0.2s, color 0.2s;
+  padding: 12px 24px;
+}
+.outline-btn:hover,
+.outline-btn:focus {
+  border-color: #ffd600;
+  color: #ffd600;
+  background: transparent;
 }
