@@ -15,6 +15,7 @@ const ContractCard = ({
   closedDate = '',
   primaryButtonText = 'Edit posting',
   secondaryButtonText = 'View Applicants',
+  onSecondaryButtonClick,
 }) => {
   return (
     <div className="contract-card">
@@ -36,7 +37,7 @@ const ContractCard = ({
       {showCloseLink && <a href="#" className="close-job-link">Close job post</a>}
       <div className="contract-card-actions">
         <button className="outline-btn">{primaryButtonText}</button>
-        <button className="white-btn">{secondaryButtonText}</button>
+        <button className="white-btn" onClick={onSecondaryButtonClick}>{secondaryButtonText}</button>
       </div>
     </div>
   );
