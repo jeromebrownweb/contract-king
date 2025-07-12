@@ -21,6 +21,10 @@ body {
   cursor: pointer;
   transition: background 0.2s, color 0.2s;
   padding: 12px 24px;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .white-btn:hover,

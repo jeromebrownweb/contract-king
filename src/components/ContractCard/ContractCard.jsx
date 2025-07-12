@@ -1,8 +1,10 @@
 import React from 'react';
 import { FiTrash2 } from 'react-icons/fi';
+import { Link } from 'react-router-dom';
 import './ContractCard.css';
 
 const ContractCard = ({
+  id,
   title = 'Senior Web Designer',
   company = 'Spotify',
   contractType = 'Outside IR35',
@@ -15,7 +17,6 @@ const ContractCard = ({
   closedDate = '',
   primaryButtonText = 'Edit posting',
   secondaryButtonText = 'View Applicants',
-  onSecondaryButtonClick,
 }) => {
   return (
     <div className="contract-card">
@@ -37,10 +38,16 @@ const ContractCard = ({
       {showCloseLink && <a href="#" className="close-job-link">Close job post</a>}
       <div className="contract-card-actions">
         <button className="outline-btn">{primaryButtonText}</button>
-        <button className="white-btn" onClick={onSecondaryButtonClick}>{secondaryButtonText}</button>
+        {secondaryButtonText === 'View Applicants' ? (
+          <Link to={`/employer/contracts/${id}/applicants`} className="white-btn">
+            {secondaryButtonText}
+          </Link>
+        ) : (
+          <button className="white-btn">{secondaryButtonText}</button>
+        )}
       </div>
     </div>
   );
 };
 
-export default ContractCard; 
+export default ContractCard;
