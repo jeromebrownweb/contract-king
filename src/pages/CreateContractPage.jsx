@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import ProgressSteps from '../components/ProgressSteps/ProgressSteps';
 import '../index.css';
 
 const contractLengths = [
@@ -34,14 +35,18 @@ const CreateContractPage = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    alert('Contract saved! (UI only)');
+    alert('Moving to Preview step! (UI only)');
   };
 
   return (
-    <div className="main-content">
-      <div className="contract-form-container">
-        <h1 className="employer-contracts-title">Edit Job Posting</h1>
-        <form className="contract-form-card" onSubmit={handleSubmit}>
+    <>
+      <ProgressSteps 
+        steps={['Create Contract', 'Preview', 'Pay & Post']} 
+        currentStep={0} 
+      />
+      <div className="main-content" style={{ paddingTop: 0 }}>
+        <div className="contract-form-container">
+          <form className="contract-form-card" onSubmit={handleSubmit}>
           <h3 className="contract-form-section-title">Contract Details</h3>
           <label>
             Role title
@@ -104,11 +109,12 @@ const CreateContractPage = () => {
           </label>
           <div className="contract-form-actions">
             <button type="button" className="outline-btn">Cancel</button>
-            <button type="submit" className="white-btn">Save Changes</button>
+            <button type="submit" className="white-btn">Next Step</button>
           </div>
         </form>
       </div>
     </div>
+    </>
   );
 };
 
