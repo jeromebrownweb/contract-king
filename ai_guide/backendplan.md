@@ -1,7 +1,7 @@
 # Backend Plan - Supabase Job Board Backend
 
 ## Overview
-This document outlines the backend architecture for Contract King, a job board where employers pay to post contract positions. We'll use Supabase (PostgreSQL database + authentication + API) with React + Vite frontend.
+This document outlines the backend architecture for Contract King, a job board where employers pay to post contract positions. We'll use Supabase (PostgreSQL database + authentication + API) with React + Vite frontend. Use context7 documentation for best practices
 
 ## Database Schema
 

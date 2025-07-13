@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 import ProgressSteps from '../components/ProgressSteps/ProgressSteps';
+import JobOverviewCard from '../components/JobOverviewCard/JobOverviewCard';
+import JobDescription from '../components/JobDescription/JobDescription';
 import '../index.css';
 
 const contractLengths = [
@@ -17,6 +19,7 @@ const contractTypes = [
 ];
 
 const CreateContractPage = () => {
+  const [currentStep, setCurrentStep] = useState(0);
   const [form, setForm] = useState({
     title: '',
     company: '',
@@ -33,20 +36,24 @@ const CreateContractPage = () => {
     setForm((prev) => ({ ...prev, [name]: value }));
   };
 
-  const handleSubmit = (e) => {
+  const handleNext = (e) => {
     e.preventDefault();
-    alert('Moving to Preview step! (UI only)');
+    setCurrentStep(1);
   };
 
-  return (
-    <>
-      <ProgressSteps 
-        steps={['Create Contract', 'Preview', 'Pay & Post']} 
-        currentStep={0} 
-      />
-      <div className="main-content" style={{ paddingTop: 0 }}>
-        <div className="contract-form-container">
-          <form className="contract-form-card" onSubmit={handleSubmit}>
+  const handleBack = () => {
+    setCurrentStep(0);
+  };
+
+  const handleFinalSubmit = () => {
+    alert('Moving to Payment step! (UI only)');
+  };
+
+  // Render Create Contract Step
+  const renderCreateStep = () => (
+    <div className="main-content" style={{ paddingTop: 0 }}>
+      <div className="contract-form-container">
+        <form className="contract-form-card" onSubmit={handleNext}>
           <h3 className="contract-form-section-title">Contract Details</h3>
           <label>
             Role title
@@ -107,15 +114,58 @@ const CreateContractPage = () => {
               placeholder="Paste your job spec here..."
             />
           </label>
-          <div className="contract-form-actions">
-            <button type="button" className="outline-btn">Cancel</button>
-            <button type="submit" className="white-btn">Next Step</button>
-          </div>
         </form>
+        <div className="contract-form-actions" style={{ marginTop: '24px' }}>
+          <button type="button" className="outline-btn">Cancel</button>
+          <button type="submit" className="white-btn" onClick={handleNext}>Next Step</button>
+        </div>
       </div>
     </div>
+  );
+
+  // Render Preview Step
+  const renderPreviewStep = () => (
+    <div className="job-details-outer-container">
+      <div className="job-details-inner-container">
+        <aside className="job-details-sidebar">
+          <JobOverviewCard 
+            title={form.title || 'Untitled Role'}
+            company={form.company || 'Company Name'}
+            location={form.location || 'Location'}
+            dayRate={form.dayRate || '£0'}
+            contractLength={form.contractLength}
+            contractType={form.contractType}
+            showApplyButton={false}
+          />
+        </aside>
+        <main className="job-details-main-content">
+          <JobDescription 
+            title={form.title || 'Untitled Role'}
+            description={form.description || 'No description provided.'}
+            company={form.company || 'Company Name'}
+            contractLength={form.contractLength}
+            contractType={form.contractType}
+            location={form.location || 'Location'}
+          />
+          <div className="contract-form-actions" style={{ marginTop: '24px' }}>
+            <button type="button" className="outline-btn" onClick={handleBack}>Back</button>
+            <button type="button" className="white-btn" onClick={handleFinalSubmit}>Next</button>
+          </div>
+        </main>
+      </div>
+    </div>
+  );
+  return (
+    <>
+      <ProgressSteps 
+        steps={['Create Contract', 'Preview', 'Pay & Post']} 
+        currentStep={currentStep} 
+      />
+      {currentStep === 0 && renderCreateStep()}
+      {currentStep === 1 && renderPreviewStep()}
     </>
   );
+
 };
 
 export default CreateContractPage; 

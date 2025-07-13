@@ -23,7 +23,7 @@
 - **Test Impact**: Check that changes don't break existing functionality
 
 ### 5. Code Efficiency
-- **Minimal Code**: Write concise, clean code - avoid unnecessary complexity
+- **Minimal Code**: Write concise, clean code - avoid unnecessary complexity - use context7 documentation for best practices
 - **Efficient HTML**: Use semantic HTML with minimal DOM elements
 - **Optimized CSS**: Keep CSS lean and avoid redundant styles
 
