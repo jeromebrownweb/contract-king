@@ -9,6 +9,7 @@ import EmployerContractsPage from './pages/EmployerContractsPage.jsx';
 import CreateContractPage from './pages/CreateContractPage.jsx';
 import ViewApplicantsPage from './pages/ViewApplicantsPage.jsx';
 import ContractSuccessPage from './pages/ContractSuccessPage.jsx';
+import WhyPostWithUsPage from './pages/WhyPostWithUsPage.jsx';
 import ErrorBoundary from './components/ErrorBoundary/ErrorBoundary.jsx';
 import './components/ErrorBoundary/ErrorBoundary.css';
 
@@ -24,6 +25,10 @@ const router = createBrowserRouter([
       {
         path: 'jobs/:id',
         element: <JobDetailsPage />,
+      },
+      {
+        path: 'why-post-with-us',
+        element: <WhyPostWithUsPage />,
       },
       {
         path: 'employer/contracts',

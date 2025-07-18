@@ -56,7 +56,7 @@ function Header() {
                         onMouseEnter={handleDropdownEnter}
                         onMouseLeave={handleDropdownLeave}
                     >
-                        <a href="#">Why post with us?</a>
+                        <Link to="/why-post-with-us">Why post with us?</Link>
                         <a href="#">Create an account</a>
                         <a href="#">Sign in</a>
                     </div>
@@ -87,7 +87,7 @@ function Header() {
                             </span>
                             {mobileDropdownOpen && (
                                 <div className="mobile-dropdown-menu">
-                                    <a href="#" style={{ paddingLeft: 24, display: 'block' }}>Why post with us?</a>
+                                    <Link to="/why-post-with-us" style={{ paddingLeft: 24, display: 'block' }}>Why post with us?</Link>
                                     <a href="#" style={{ paddingLeft: 24, display: 'block' }}>Create an account</a>
                                     <a href="#" style={{ paddingLeft: 24, display: 'block' }}>Sign in</a>
                                 </div>
