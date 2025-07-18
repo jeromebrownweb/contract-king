@@ -28,6 +28,10 @@ export default [
         'warn',
         { allowConstantExport: true },
       ],
+      // Debug code detection rules
+      'no-console': process.env.NODE_ENV === 'production' ? 'error' : 'warn',
+      'no-debugger': process.env.NODE_ENV === 'production' ? 'error' : 'warn',
+      'no-alert': 'error', // Always prevent alert() usage
     },
   },
 ]

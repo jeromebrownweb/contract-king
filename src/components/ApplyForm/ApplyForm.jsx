@@ -1,4 +1,5 @@
 import React, { useRef, useState } from 'react';
+import debug from '../../utils/debug';
 import './ApplyForm.css';
 
 const ApplyForm = () => {
@@ -27,8 +28,8 @@ const ApplyForm = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // UI only: show alert or clear form
-    alert('Application submitted! (UI only)');
+    debug.log('ApplyForm', 'Application submitted (UI only)');
+    debug.success('ApplyForm', 'Application form submitted successfully');
   };
 
   return (

@@ -1,10 +1,11 @@
 import React from 'react';
+import debug from '../../utils/debug';
 import './SearchSummary.css';
 
 const SearchSummary = ({ searchTerm = "Web Designer", resultCount = 12 }) => {
   const handleClearSearch = () => {
     // Placeholder function - will be connected to backend logic later
-    console.log('Clear search clicked');
+    debug.log('SearchSummary', 'Clear search clicked');
   };
 
   return (

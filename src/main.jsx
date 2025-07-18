@@ -8,6 +8,9 @@ import JobDetailsPage from './pages/JobDetailsPage.jsx'; // We will create this 
 import EmployerContractsPage from './pages/EmployerContractsPage.jsx';
 import CreateContractPage from './pages/CreateContractPage.jsx';
 import ViewApplicantsPage from './pages/ViewApplicantsPage.jsx';
+import ContractSuccessPage from './pages/ContractSuccessPage.jsx';
+import ErrorBoundary from './components/ErrorBoundary/ErrorBoundary.jsx';
+import './components/ErrorBoundary/ErrorBoundary.css';
 
 const router = createBrowserRouter([
   {
@@ -31,6 +34,10 @@ const router = createBrowserRouter([
         element: <CreateContractPage />,
       },
       {
+        path: 'contract/success',
+        element: <ContractSuccessPage />,
+      },
+      {
         path: 'employer/contracts/:id/applicants',
         element: <ViewApplicantsPage />,
       },
@@ -40,6 +47,8 @@ const router = createBrowserRouter([
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <RouterProvider router={router} />
+    <ErrorBoundary>
+      <RouterProvider router={router} />
+    </ErrorBoundary>
   </StrictMode>,
 );
