@@ -52,7 +52,7 @@
 .hero-cta-button {
   display: inline-block;
   background: white;
-  color: #1e40af;
+  color: #0a2240;
   padding: 1rem 2rem;
   border-radius: 8px;
   font-weight: 600;
@@ -63,9 +63,8 @@
 }
 
 .hero-cta-button:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
-  color: #1e40af;
+  background: #ffd600;
+  color: #0a2240;
 }
 
 .hero-image {
@@ -137,7 +136,7 @@
   
   .hero-image {
     margin-right: 0;
-    order: -1; /* Show image above text on mobile */
+    /* Remove the order: -1 so text stays above image */
   }
   
   .hero-image img {
@@ -154,5 +153,116 @@
   .hero-cta-button {
     padding: 0.875rem 1.75rem;
     font-size: 1rem;
+  }
+}
+
+/* Process Steps Section */
+.process-section {
+  background: #082350;
+  padding: 8rem 0;
+}
+
+.process-container {
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 2rem;
+  text-align: center;
+}
+
+.process-header {
+  margin-bottom: 5rem;
+}
+
+.process-title {
+  font-size: 3rem;
+  font-weight: 700;
+  color: white;
+  margin-bottom: 1rem;
+  letter-spacing: -0.02em;
+}
+
+.process-description {
+  font-size: 1.25rem;
+  color: rgba(255, 255, 255, 0.9);
+  max-width: 600px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+.process-visual {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  overflow: hidden;
+}
+
+.progress-image {
+  max-width: 100%;
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  filter: drop-shadow(0 8px 25px rgba(0, 0, 0, 0.3));
+  object-fit: contain;
+}
+
+/* Tablet Styles for Process Section */
+@media (max-width: 1199px) {
+  .process-section {
+    padding: 6rem 0;
+  }
+  
+  .process-title {
+    font-size: 2.5rem;
+  }
+  
+  .process-container {
+    padding: 0 1.5rem;
+  }
+  
+  .progress-image {
+    max-width: 85%;
+    width: 85%;
+  }
+}
+
+/* Mobile Styles for Process Section */
+@media (max-width: 768px) {
+  .process-section {
+    padding: 4rem 0;
+  }
+  
+  .process-container {
+    padding: 0 1rem;
+  }
+  
+  .process-header {
+    margin-bottom: 3rem;
+  }
+  
+  .process-title {
+    font-size: 2rem;
+  }
+  
+  .process-description {
+    font-size: 1rem;
+  }
+  
+  .progress-image {
+    max-width: 95%;
+    width: 95%;
+  }
+}
+
+/* Small Mobile */
+@media (max-width: 480px) {
+  .process-container {
+    padding: 0 0.75rem;
+  }
+  
+  .progress-image {
+    max-width: 100%;
+    width: 100%;
   }
 }

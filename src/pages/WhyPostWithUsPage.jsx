@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import heroImage from '../assets/hero image.png';
+import heroImage from '../assets/hero_pic.png';
+import progressImage from '../assets/progress.png';
 import './WhyPostWithUsPage.css';
 
 const WhyPostWithUsPage = () => {
@@ -28,6 +29,22 @@ const WhyPostWithUsPage = () => {
             <div className="hero-image">
               <img src={heroImage} alt="Contract King Dashboard" />
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Process Steps Section */}
+      <section className="process-section">
+        <div className="process-container">
+          <div className="process-header">
+            <h2 className="process-title">What makes it easy?</h2>
+            <p className="process-description">
+              We try to keep the UI straight to the point, taking out all the fluff
+            </p>
+          </div>
+          
+          <div className="process-visual">
+            <img src={progressImage} alt="Simple 3-step process: Create Contract, Preview, Pay & Post" className="progress-image" />
           </div>
         </div>
       </section>
