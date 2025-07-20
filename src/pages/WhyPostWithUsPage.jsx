@@ -1,7 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import heroImage from '../assets/hero_pic.png';
+import heroImage from '../assets/hero_image_v2.png';
 import progressImage from '../assets/progress.png';
+import jobCardImage from '../assets/job_card.png';
 import './WhyPostWithUsPage.css';
 
 const WhyPostWithUsPage = () => {
@@ -13,9 +14,11 @@ const WhyPostWithUsPage = () => {
           <div className="hero-content">
             <div className="hero-text">
               <h1 className="hero-title">
-                Making it super easy
+                Streamlining your
                 <br />
-                to find contractors
+                search for top 
+                 <br />
+                contractors
               </h1>
               <p className="hero-description">
                 Contract King is a little place on the internet that helps
@@ -45,6 +48,27 @@ const WhyPostWithUsPage = () => {
           
           <div className="process-visual">
             <img src={progressImage} alt="Simple 3-step process: Create Contract, Preview, Pay & Post" className="progress-image" />
+          </div>
+        </div>
+      </section>
+
+      {/* Tracking Section */}
+      <section className="tracking-section">
+        <div className="tracking-container">
+          <div className="tracking-content">
+            <div className="tracking-image">
+              <img src={jobCardImage} alt="Job postings dashboard" />
+            </div>
+            <div className="tracking-text">
+              <h2 className="tracking-title">
+                Keep track
+                <br />
+                of your postings
+              </h2>
+              <p className="tracking-description">
+                You get a dashboard where you can see all your postings
+              </p>
+            </div>
           </div>
         </div>
       </section>
