@@ -1,5 +1,5 @@
 .job-details-outer-container {
-  background: #0a2240; /* Deep blue background to match Figma */
+  background: #082350; /* Deep blue background to match Figma */
   min-height: calc(100vh - 120px); /* Adjust for header/footer */
   width: 100%;
 }
@@ -22,7 +22,7 @@
   flex: 3;
   display: flex;
   flex-direction: column;
-  gap: 32px;
+  gap: 4px;
 }
 
 .job-details-sidebar h3 {

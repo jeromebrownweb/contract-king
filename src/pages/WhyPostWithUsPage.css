@@ -393,3 +393,203 @@
     line-height: 32px;
   }
 }
+
+/* Applicants Section */
+.applicants-section {
+  background: #082350;
+  padding: 8rem 0;
+}
+
+.applicants-container {
+  max-width: 1400px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.applicants-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: center;
+}
+
+.applicants-text {
+  z-index: 2;
+}
+
+.applicants-title {
+  font-size: 52px;
+  font-weight: 700;
+  color: white;
+  line-height: 55px;
+  margin-bottom: 1.5rem;
+  letter-spacing: -0.02em;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+}
+
+.applicants-description {
+  font-size: 1.25rem;
+  color: #cccccc;
+  line-height: 1.6;
+  max-width: 500px;
+}
+
+.applicants-image {
+  position: relative;
+  border-radius: 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.applicants-image img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 12px;
+  filter: drop-shadow(0 25px 50px rgba(0, 0, 0, 0.3));
+}
+
+/* Final CTA Section */
+.final-cta-section {
+  background: #0f172a;
+  padding: 8rem 0;
+}
+
+.final-cta-container {
+  max-width: 800px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 2rem;
+  text-align: center;
+}
+
+.cta-logo {
+  margin-bottom: 3rem;
+  display: flex;
+  justify-content: center;
+}
+
+.cta-title {
+  font-size: 52px;
+  font-weight: 700;
+  color: white;
+  line-height: 55px;
+  margin-bottom: 1.5rem;
+  letter-spacing: -0.02em;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+}
+
+.cta-description {
+  font-size: 1.25rem;
+  color: #cccccc;
+  line-height: 1.6;
+  margin-bottom: 3rem;
+}
+
+.cta-button {
+  display: inline-block;
+  background: white;
+  color: #0a2240;
+  padding: 1rem 2rem;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 1.1rem;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.cta-button:hover {
+  background: #ffd600;
+  color: #0a2240;
+}
+
+/* Large Screen Styles for Applicants (1440px and above) */
+@media (min-width: 1440px) {
+  .applicants-title,
+  .cta-title {
+    font-size: 70px;
+    line-height: 80px;
+  }
+}
+
+/* Tablet Styles for Applicants */
+@media (max-width: 1199px) {
+  .applicants-content {
+    gap: 3rem;
+  }
+  
+  .applicants-title {
+    font-size: 44px;
+    line-height: 48px;
+  }
+  
+  .applicants-description {
+    font-size: 1.1rem;
+  }
+  
+  .cta-title {
+    font-size: 44px;
+    line-height: 48px;
+  }
+}
+
+/* Mobile Styles for Applicants and CTA */
+@media (max-width: 768px) {
+  .applicants-section,
+  .final-cta-section {
+    padding: 4rem 0;
+  }
+  
+  .applicants-container,
+  .final-cta-container {
+    padding: 0 1.5rem;
+  }
+  
+  .applicants-content {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+    text-align: center;
+  }
+  
+  .applicants-title,
+  .cta-title {
+    font-size: 36px;
+    line-height: 40px;
+    margin-bottom: 1rem;
+  }
+  
+  .applicants-description,
+  .cta-description {
+    font-size: 1rem;
+    max-width: none;
+  }
+  
+  .applicants-image img {
+    width: 100%;
+  }
+  
+  .cta-logo {
+    margin-bottom: 2rem;
+  }
+  
+  .cta-description {
+    margin-bottom: 2rem;
+  }
+}
+
+/* Small Mobile for Applicants and CTA */
+@media (max-width: 480px) {
+  .applicants-title,
+  .cta-title {
+    font-size: 28px;
+    line-height: 32px;
+  }
+  
+  .cta-button {
+    padding: 0.875rem 1.75rem;
+    font-size: 1rem;
+  }
+}

@@ -1,5 +1,5 @@
 .apply-form-card {
-  background: #1a2b4c;
+  background: #183769;
   color: #fff;
   border-radius: 16px;
   padding: 32px 32px 24px 32px;
@@ -30,7 +30,7 @@
   padding: 10px 12px;
   border-radius: 8px;
   border: 1px solid #2c3e5c;
-  background: #14264a;
+  background: #082350;
   color: #fff;
   font-size: 1rem;
   margin-top: 2px;
@@ -41,7 +41,7 @@
 }
 
 .cv-drop-area {
-  background: #14264a;
+  background: #082350;
   border: 2px dashed #2c3e5c;
   border-radius: 8px;
   padding: 24px 12px;

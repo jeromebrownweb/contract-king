@@ -27,7 +27,7 @@ const router = createBrowserRouter([
         element: <JobDetailsPage />,
       },
       {
-        path: 'why-post-with-us',
+        path: 'about-us',
         element: <WhyPostWithUsPage />,
       },
       {

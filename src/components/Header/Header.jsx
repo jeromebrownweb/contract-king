@@ -36,7 +36,7 @@ function Header() {
         <header className={`header ${isMenuOpen ? 'menu-open' : ''}`}>
             <Link to="/" className="logo">Contract King</Link>
             <nav className="desktop-nav-links">
-                <a href="#">About us</a>
+                <Link to="/about-us">About us</Link>
                 <div
                     className="dropdown"
                     onMouseEnter={handleDropdownEnter}
@@ -56,7 +56,6 @@ function Header() {
                         onMouseEnter={handleDropdownEnter}
                         onMouseLeave={handleDropdownLeave}
                     >
-                        <Link to="/why-post-with-us">Why post with us?</Link>
                         <a href="#">Create an account</a>
                         <a href="#">Sign in</a>
                     </div>
@@ -73,7 +72,7 @@ function Header() {
             {isMenuOpen && (
                 <div className="mobile-menu-overlay">
                     <nav className="mobile-nav-links">
-                        <a href="#">About us</a>
+                        <Link to="/about-us">About us</Link>
                         <div className="mobile-dropdown">
                             <span 
                                 className="mobile-dropdown-label"
@@ -87,7 +86,6 @@ function Header() {
                             </span>
                             {mobileDropdownOpen && (
                                 <div className="mobile-dropdown-menu">
-                                    <Link to="/why-post-with-us" style={{ paddingLeft: 24, display: 'block' }}>Why post with us?</Link>
                                     <a href="#" style={{ paddingLeft: 24, display: 'block' }}>Create an account</a>
                                     <a href="#" style={{ paddingLeft: 24, display: 'block' }}>Sign in</a>
                                 </div>

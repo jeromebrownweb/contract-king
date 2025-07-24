@@ -1,8 +1,10 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import heroImage from '../assets/hero_image_v2.png';
-import progressImage from '../assets/progress.png';
-import jobCardImage from '../assets/job_card.png';
+import progressImage from '../assets/progress.svg';
+import contractsImage from '../assets/contracts.svg';
+import applicantsImage from '../assets/applicants.svg';
+import contractKingLogo from '../assets/icon_large.svg';
 import './WhyPostWithUsPage.css';
 
 const WhyPostWithUsPage = () => {
@@ -57,7 +59,7 @@ const WhyPostWithUsPage = () => {
         <div className="tracking-container">
           <div className="tracking-content">
             <div className="tracking-image">
-              <img src={jobCardImage} alt="Job postings dashboard" />
+              <img src={contractsImage} alt="Job postings dashboard" />
             </div>
             <div className="tracking-text">
               <h2 className="tracking-title">
@@ -70,6 +72,43 @@ const WhyPostWithUsPage = () => {
               </p>
             </div>
           </div>
+        </div>
+      </section>
+
+      {/* Applicants Section */}
+      <section className="applicants-section">
+        <div className="applicants-container">
+          <div className="applicants-content">
+            <div className="applicants-text">
+              <h2 className="applicants-title">
+                Easily view
+                <br />
+                all applicants
+              </h2>
+              <p className="applicants-description">
+                Click through a ton of CVs in a painless way
+              </p>
+            </div>
+            <div className="applicants-image">
+              <img src={applicantsImage} alt="Applicants dashboard" />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Final CTA Section */}
+      <section className="final-cta-section">
+        <div className="final-cta-container">
+          <div className="cta-logo">
+            <img src={contractKingLogo} alt="Contract King logo" width={80} height={80} />
+          </div>
+          <h2 className="cta-title">Post your job today from £99.99</h2>
+          <p className="cta-description">
+            Create your post today and get that team built
+          </p>
+          <Link to="/employer/contracts/create" className="cta-button">
+            Post a job
+          </Link>
         </div>
       </section>
     </div>
