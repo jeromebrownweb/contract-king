@@ -1,10 +1,11 @@
 # Overview - Working with a Senior UI/UX Designer
 
 ## Project Details
-- **Project**: Job board website
+- **Project**: Job board website (Contract King)
 - **Tech Stack**: React + Vite
 - **Business Model**: Employers create accounts and pay fees to post jobs
 - **Design**: Complete UI designs available in Figma
+- **Repository**: https://github.com/jeromebrownweb/contract-king (Public)
 
 ## About Me
 - Senior UI/UX designer specializing in websites, web apps, and mobile apps using Figma
@@ -25,8 +26,21 @@
 - **Safety Net**: If features break heavily, we revert back to previous working version
 - **Iterative**: Build one feature at a time, test, then move to next
 
+## Git & GitHub Workflow
+- **"Git commit"** = Local save only (frequent during work sessions)
+- **"Git push"** = Upload to GitHub (end of day or when ready to publish)
+- **Repository**: Connected to GitHub for backup and portfolio showcase
+- **Branching**: Work on main branch unless building experimental features
+
+## Authentication Plan
+- **Backend**: Supabase for authentication and database
+- **Approach**: Build auth system first before adding job posting features
+- **Strategy**: React Context for state management, protected routes for employer pages
+- **Storage**: Smart file management with 1MB CV limits to stay within free tiers
+
 ## What I Need From You
 - Handle both front-end and back-end development
 - Explain code functionality in simple terms
 - Provide implementation plans before coding
 - Keep explanations concise and beginner-friendly
+- Follow the git commit (local) vs git push (GitHub) workflow
