@@ -1,0 +1,182 @@
+.login-form-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.login-form {
+  background: #082350;
+  padding: 2rem;
+  border-radius: 8px;
+  width: 90%;
+  max-width: 400px;
+  position: relative;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border: 1px solid #0d1a33;
+}
+
+.close-btn {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: #fff;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+}
+
+.close-btn:hover {
+  background: rgba(255, 255, 255, 0.1);
+  color: #ffd700;
+}
+
+.login-form h2 {
+  margin: 0 0 1.5rem 0;
+  color: #fff;
+  text-align: center;
+}
+
+.form-group {
+  margin-bottom: 1rem;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+  color: #fff;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid #0d1a33;
+  border-radius: 4px;
+  font-size: 1rem;
+  transition: border-color 0.2s;
+  background: #0d1a33;
+  color: #fff;
+  box-sizing: border-box;
+}
+
+/* More specific selectors to override global email input styles */
+.login-form .form-group input[type="email"],
+.login-form .form-group input[type="password"] {
+  width: 100% !important;
+  padding: 0.75rem !important;
+  border: 1px solid #0d1a33 !important;
+  border-radius: 4px !important;
+  font-size: 1rem !important;
+  transition: border-color 0.2s !important;
+  background: #0d1a33 !important;
+  color: #fff !important;
+  box-sizing: border-box !important;
+}
+
+/* Ensure background stays dark when input has value/is filled */
+.login-form .form-group input[type="email"]:not(:placeholder-shown),
+.login-form .form-group input[type="password"]:not(:placeholder-shown) {
+  background: #0d1a33 !important;
+  color: #fff !important;
+}
+
+/* Handle autofill states */
+.login-form .form-group input[type="email"]:-webkit-autofill,
+.login-form .form-group input[type="password"]:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0 1000px #0d1a33 inset !important;
+  -webkit-text-fill-color: #fff !important;
+  background: #0d1a33 !important;
+}
+
+.form-group input::placeholder {
+  color: #8b9dc3;
+}
+
+.login-form .form-group input[type="email"]::placeholder,
+.login-form .form-group input[type="password"]::placeholder {
+  color: #8b9dc3 !important;
+}
+
+.form-group input:focus {
+  outline: none;
+  border-color: #ffd700;
+}
+
+.login-form .form-group input[type="email"]:focus,
+.login-form .form-group input[type="password"]:focus {
+  outline: none !important;
+  border-color: #ffd700 !important;
+}
+
+.form-group input:disabled {
+  background: #1a2b4a;
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+.submit-btn {
+  width: 100%;
+  background: #fff;
+  color: #082350;
+  border: none;
+  padding: 0.75rem;
+  border-radius: 4px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+  margin-top: 0.5rem;
+}
+
+.submit-btn:hover:not(:disabled) {
+  background: #ffd700;
+  transform: translateY(-1px);
+}
+
+.submit-btn:disabled {
+  background: #8b9dc3;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.error-message {
+  background: rgba(255, 69, 58, 0.15);
+  color: #ff453a;
+  padding: 0.75rem;
+  border-radius: 4px;
+  margin-bottom: 1rem;
+  border: 1px solid rgba(255, 69, 58, 0.3);
+}
+
+.switch-form {
+  text-align: center;
+  margin-top: 1.5rem;
+  color: #8b9dc3;
+}
+
+.link-btn {
+  background: none;
+  border: none;
+  color: #ffd700;
+  cursor: pointer;
+  text-decoration: underline;
+  font-size: inherit;
+}
+
+.link-btn:hover {
+  color: #fff;
+}

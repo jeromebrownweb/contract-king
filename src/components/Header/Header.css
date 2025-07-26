@@ -106,8 +106,26 @@ body {
     transition: color 0.2s;
 }
 
-.dropdown-menu a:hover {
+.dropdown-menu button {
+    color: #fff;
+    text-decoration: underline;
+    font-size: 1rem;
+    transition: color 0.2s;
+    background: none;
+    border: none;
+    cursor: pointer;
+    text-align: left;
+    padding: 0;
+}
+
+.dropdown-menu a:hover,
+.dropdown-menu button:hover {
     color: #ffd700;
+}
+
+.dropdown-menu button:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
 }
 
 /* Prevent page scrolling when mobile menu is open */
@@ -195,8 +213,19 @@ body.no-scroll {
 }
 
 /* Add spacing to mobile dropdown submenu links */
-.mobile-dropdown-menu a {
-    margin: 42px 0;
+.mobile-dropdown-menu a,
+.mobile-dropdown-menu button {
+    margin: 3rem 0;
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.2rem;
+    width: 100%;
+    display: block;
+    background: none;
+    border: none;
+    text-align: left;
+    cursor: pointer;
+    padding: 0;
 }
 
 /* Add spacing to top-level mobile nav links and button */

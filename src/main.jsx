@@ -12,6 +12,7 @@ import ContractSuccessPage from './pages/ContractSuccessPage.jsx';
 import WhyPostWithUsPage from './pages/WhyPostWithUsPage.jsx';
 import ErrorBoundary from './components/ErrorBoundary/ErrorBoundary.jsx';
 import './components/ErrorBoundary/ErrorBoundary.css';
+import { AuthProvider } from './context/AuthContext.jsx';
 
 const router = createBrowserRouter([
   {
@@ -52,8 +53,10 @@ const router = createBrowserRouter([
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <ErrorBoundary>
-      <RouterProvider router={router} />
-    </ErrorBoundary>
+    <AuthProvider>
+      <ErrorBoundary>
+        <RouterProvider router={router} />
+      </ErrorBoundary>
+    </AuthProvider>
   </StrictMode>,
 );
