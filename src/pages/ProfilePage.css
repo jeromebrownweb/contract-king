@@ -180,6 +180,12 @@
   margin-bottom: 16px;
 }
 
+/* Password Section */
+.profile-section:nth-child(3) {
+  border-top: 1px solid #1e3a5f;
+  padding-top: 32px;
+}
+
 /* Account Management Section */
 .account-management {
   border-top: 1px solid #1e3a5f;
