@@ -99,6 +99,7 @@ function Header() {
                             onMouseEnter={handleDropdownEnter}
                             onMouseLeave={handleDropdownLeave}
                         >
+                            <Link to="/profile">Your account</Link>
                             <Link to="/employer/contracts">My Contracts</Link>
                             <button onClick={handleSignOut} disabled={loading}>
                                 {loading ? 'Signing out...' : 'Sign out'}
@@ -161,6 +162,7 @@ function Header() {
                                 </span>
                                 {mobileDropdownOpen && (
                                     <div className="mobile-dropdown-menu">
+                                        <Link to="/profile" onClick={closeMobileMenu} style={{ paddingLeft: 24, display: 'block' }}>Your account</Link>
                                         <Link to="/employer/contracts" onClick={closeMobileMenu} style={{ paddingLeft: 24, display: 'block' }}>My Contracts</Link>
                                         <button 
                                             onClick={handleSignOut} 

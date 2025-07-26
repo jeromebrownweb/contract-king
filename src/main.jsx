@@ -10,6 +10,7 @@ import CreateContractPage from './pages/CreateContractPage.jsx';
 import ViewApplicantsPage from './pages/ViewApplicantsPage.jsx';
 import ContractSuccessPage from './pages/ContractSuccessPage.jsx';
 import WhyPostWithUsPage from './pages/WhyPostWithUsPage.jsx';
+import ProfilePage from './pages/ProfilePage.jsx';
 import ErrorBoundary from './components/ErrorBoundary/ErrorBoundary.jsx';
 import './components/ErrorBoundary/ErrorBoundary.css';
 import { AuthProvider } from './context/AuthContext.jsx';
@@ -30,6 +31,10 @@ const router = createBrowserRouter([
       {
         path: 'about-us',
         element: <WhyPostWithUsPage />,
+      },
+      {
+        path: 'profile',
+        element: <ProfilePage />,
       },
       {
         path: 'employer/contracts',

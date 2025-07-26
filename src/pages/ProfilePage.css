@@ -1,0 +1,235 @@
+/* src/pages/ProfilePage.css */
+.profile-page {
+  min-height: calc(100vh - 120px);
+  background: #082350;
+  padding: 40px 24px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.profile-container {
+  width: 100%;
+  max-width: 600px;
+  background: #082350;
+}
+
+.profile-header {
+  margin-bottom: 48px;
+}
+
+.profile-header h1 {
+  color: #fff;
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin: 0 0 16px 0;
+}
+
+.profile-header p {
+  color: #b0c4de;
+  font-size: 1.1rem;
+  margin: 0;
+  line-height: 1.5;
+}
+
+.profile-content {
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
+}
+
+.profile-section {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.profile-section h2 {
+  color: #fff;
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin: 0;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.form-group label {
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.profile-input {
+  padding: 16px;
+  border: 2px solid #1e3a5f;
+  border-radius: 8px;
+  background: #0f2847;
+  color: #fff;
+  font-size: 1rem;
+  transition: all 0.2s ease;
+}
+
+.profile-input:focus {
+  outline: none;
+  border-color: #ffd700;
+  background: #1a3d66;
+}
+
+.profile-input:not(:placeholder-shown) {
+  background: #1a3d66;
+  border-color: #2e5984;
+}
+
+/* Read-only field styling */
+.profile-input.readonly {
+  opacity: 0.7;
+  background: #0a1d3a;
+  border-color: #1a3250;
+  cursor: not-allowed;
+  color: #b0c4de;
+}
+
+.profile-input.readonly:focus {
+  border-color: #1a3250;
+  background: #0a1d3a;
+}
+
+/* Handle autofill */
+.profile-input:-webkit-autofill,
+.profile-input:-webkit-autofill:hover,
+.profile-input:-webkit-autofill:focus {
+  -webkit-box-shadow: 0 0 0 1000px #1a3d66 inset;
+  -webkit-text-fill-color: #fff;
+  border-color: #2e5984;
+}
+
+.profile-input.readonly:-webkit-autofill,
+.profile-input.readonly:-webkit-autofill:hover,
+.profile-input.readonly:-webkit-autofill:focus {
+  -webkit-box-shadow: 0 0 0 1000px #0a1d3a inset;
+  -webkit-text-fill-color: #b0c4de;
+  border-color: #1a3250;
+}
+
+.update-password-btn {
+  padding: 16px 24px;
+  background: #fff;
+  color: #082350;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  margin-top: 8px;
+}
+
+.update-password-btn:hover:not(:disabled) {
+  background: #f2f2f2;
+  transform: translateY(-1px);
+}
+
+.update-password-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.reset-password-link {
+  background: none;
+  border: none;
+  color: #ffd700;
+  text-decoration: underline;
+  font-size: 1rem;
+  cursor: pointer;
+  padding: 8px 0;
+  text-align: left;
+  transition: color 0.2s ease;
+}
+
+.reset-password-link:hover:not(:disabled) {
+  color: #ffed4e;
+}
+
+.reset-password-link:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.success-message {
+  background: rgba(34, 197, 94, 0.1);
+  border: 1px solid #22c55e;
+  color: #22c55e;
+  padding: 12px 16px;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  margin-bottom: 16px;
+}
+
+.error-message {
+  background: rgba(239, 68, 68, 0.1);
+  border: 1px solid #ef4444;
+  color: #ef4444;
+  padding: 12px 16px;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  margin-bottom: 16px;
+}
+
+/* Account Management Section */
+.account-management {
+  border-top: 1px solid #1e3a5f;
+  padding-top: 32px;
+}
+
+.account-management p {
+  color: #b0c4de;
+  font-size: 1rem;
+  line-height: 1.5;
+  margin: 0;
+}
+
+.delete-account-btn {
+  padding: 12px 24px;
+  background: transparent;
+  color: #ef4444;
+  border: 2px solid #ef4444;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  margin-top: 16px;
+}
+
+.delete-account-btn:hover {
+  background: rgba(239, 68, 68, 0.1);
+  transform: translateY(-1px);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .profile-page {
+    padding: 24px 16px;
+  }
+  
+  .profile-header h1 {
+    font-size: 2rem;
+  }
+  
+  .profile-header p {
+    font-size: 1rem;
+  }
+  
+  .profile-content {
+    gap: 32px;
+  }
+  
+  .profile-section {
+    gap: 20px;
+  }
+}
